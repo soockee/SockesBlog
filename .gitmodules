@@ -1,0 +1,3 @@
+[submodule "gatsby-v2-tutorial-starter"]
+	path = gatsby-v2-tutorial-starter
+	url = https://github.com/justinformentin/gatsby-v2-tutorial-starter
