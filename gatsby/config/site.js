@@ -5,7 +5,7 @@ module.exports = {
   description: 'Sockes Blockgedöns',
   url: 'https://socke.xyz', // Domain of your site. No trailing slash!
   siteUrl: 'https://socke.xyz', // url + pathPrefix
-  siteLanguage: 'en', // Language Tag on <html> element
+  siteLanguage: 'de', // Language Tag on <html> element
   logo: 'static/logo/logo.png', // Used for SEO
   banner: 'static/logo/banner.png',
   // JSONLD / Manifest

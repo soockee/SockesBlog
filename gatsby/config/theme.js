@@ -11,13 +11,13 @@ export const colors = {
     blue: '#2e3246',
   },
   primary: {
-    base: '#3498db',
-    light: '#3e5fbc',
-    dark: '#284187',
+    base: '#6',
+    light: '#2ab09a',
+    dark: '#1d7869',
   },
   background: {
-    light: '#3e5fbc',
-    dark: '#284187',
+    light: '#2ab09a',
+    dark: '#1d7869',
   },
 };
 

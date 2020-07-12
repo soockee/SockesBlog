@@ -25,10 +25,10 @@ const Footer = () => (
   <Wrapper>
     <Text>
       <span>
-        Sockes Bloggedöns -{' '}
-        <a href="https://justinformentin.com">Geklaut von Justin Formentin</a>
+        Sockes Blog
       </span>
     </Text>
+    <SocialMedia />
   </Wrapper>
 );
 export default Footer;

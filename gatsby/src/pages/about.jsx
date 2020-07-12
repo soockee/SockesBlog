@@ -7,13 +7,14 @@ import { Layout, Container } from 'layouts';
 const About = center => (
   <Layout>
     <Helmet title={'About Page'} />
-    <Header title="About Page">Gatsby Tutorial Starter</Header>
     <Container center={center}>
-      <h3>
-        If you would like to build this site completely from scratch, you can
-        read the guide{' '}
-        <a href="https://justinformentin.com/gatsby-v2-guide">here.</a>
-      </h3>
+      <h3>Hi! I bims der Simon =)</h3>
+      <ul>
+        <li>Student an der Technischen Hochschule Mittelhessen. </li>
+        <li>Spiele in meiner Bude bisschen Bass und Gitarre. </li>
+        <li>Dungeon Keeper sollte man mal ausprobieren!</li>
+        <li>Sport ist ganz nett</li>
+      </ul>
     </Container>
   </Layout>
 );
@@ -23,3 +24,5 @@ export default About;
 About.propTypes = {
   center: PropTypes.object,
 };
+
+//<Header title="About Page">Hi! I bims der Simon</Header>
