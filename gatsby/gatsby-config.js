@@ -31,15 +31,24 @@ module.exports = {
         ],
       },
     },
+    'gatsby-transformer-sharp',
+    'gatsby-plugin-sharp',
     {
-      resolve: 'gatsby-plugin-emotion',
+      resolve: 'gatsby-source-filesystem',
       options: {
-        autoLabel: process.env.NODE_ENV !== 'production',
-        // eslint-disable-next-line
-        labelFormat: `[filename]--[local]`,
+        name: 'images',
+        path: `${__dirname}/static/logo`,
       },
     },
     {
+    resolve: 'gatsby-plugin-emotion',
+    options: {
+      autoLabel: process.env.NODE_ENV !== 'production',
+      // eslint-disable-next-line
+      labelFormat: `[filename]--[local]`,
+    },
+  },
+  {
       resolve: 'gatsby-plugin-typography',
       options: {
         pathToConfigModule: 'config/typography.js',
