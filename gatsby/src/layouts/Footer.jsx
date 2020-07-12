@@ -28,7 +28,6 @@ const Footer = () => (
         Sockes Blog
       </span>
     </Text>
-    <SocialMedia />
   </Wrapper>
 );
 export default Footer;

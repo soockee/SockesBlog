@@ -16,10 +16,10 @@ SocialMedia.propTypes = {
     githubURL: PropTypes.string,
     stackoverflowURL: PropTypes.string,
 };
-SEO.defaultProps = {
+SocialMedia.defaultProps = {
     instagramURL: "https://www.instagram.com/sockeod/",
     githubURL: "https://github.com/Soockee",
     stackoverflowURL: "https://stackoverflow.com/users/7383590/socke",
-  };
+};
 
 export default SocialMedia;

@@ -10,6 +10,7 @@ const Blog = ({ data }) => {
   return (
     <Layout>
       <Helmet title={'Blog Page'} />
+      <Header title="Blog Page"></Header>
       {edges.map(({ node }) => (
         <BlogList
           key={node.id}
@@ -64,8 +65,8 @@ export const query = graphql`
               childImageSharp {
                 fluid(
                   maxWidth: 1000
-                  quality: 90
-                  traceSVG: { color: "#2B2B2F" }
+                  quality: 90           
+                  traceSVG: { color: "#4b4e57" }
                 ) {
                   ...GatsbyImageSharpFluid_withWebp_tracedSVG
                 }
