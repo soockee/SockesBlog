@@ -16,8 +16,9 @@ RUN npm install
 # Syslink for serving gatsby site by nginx
 RUN gatsby build
 RUN nginx -V 2>&1 | grep --color -o -e '--prefix=[^[:space:]]\+'
-RUN mv /home/blog/public /usr/share/nginx/html
+RUN mv /home/blog/public /var/www/html/
+RUN rm /var/www/html/index.nginx-debian.html
 
 COPY nginx.conf /etc/nginx/nginx.conf
-#COPY default.conf /etc/nginx/conf.d/default.conf
+##COPY default.conf /etc/nginx/conf.d/default.conf
 EXPOSE 80
