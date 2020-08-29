@@ -7,7 +7,7 @@
       title="Socke.xyz"
     />
   </a>
-  <h1 align="center">Socke.xyz<h1>
+  <b>Socke.xyz</b><br>
 </p>
 
 # Usage
