@@ -1,7 +1,7 @@
 <p align="center">
   <a href="https://socke.xyz">
     <img
-      src="https://github.com/Soockee/SockesBlog/tree/master/img/Logo.png"
+      src="https://github.com/Soockee/SockesBlog/blob/master/img/Logo.png"
       height="80"
       alt="Socke.xyz"
       title="Socke.xyz"
