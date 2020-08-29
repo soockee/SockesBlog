@@ -1,7 +1,7 @@
 ---
 path: "/inventory-system-ue4"
 cover: "./guy_on_pc.jpg"
-date: "2020-07-12"
+date: "2020-08-29"
 title: "Inventory System in Unreal Engine 4"
 published: true
 tags: ['Game Dev', 'Unreal Engine',]
