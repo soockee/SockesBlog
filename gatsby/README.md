@@ -2,11 +2,14 @@
   <a href="https://socke.xyz">
     <img
       src="https://github.com/Soockee/SockesBlog/blob/master/img/Logo.png"
-      height="80"
+      height="160"
       alt="Socke.xyz"
       title="Socke.xyz"
     />
   </a>
+</p>
+<p align="center">
+  <h1>Socke.xyz<h1>
 </p>
 
 # Usage
