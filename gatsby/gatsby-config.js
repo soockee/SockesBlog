@@ -40,6 +40,28 @@ module.exports = {
         path: `${__dirname}/static/logo`,
       },
     },
+    `gatsby-plugin-sharp`,
+    {
+      resolve: `gatsby-transformer-remark`,
+      options: {
+        plugins: [
+          {
+            resolve: `gatsby-remark-images`,
+            options: {
+              maxWidth: 800,
+              quality: 90,
+              linkImagesToOriginal: true,
+            },
+          },
+        ],
+      },
+    },
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        path: `${__dirname}/content/posts`,
+      },
+    },
     {
     resolve: 'gatsby-plugin-emotion',
     options: {
