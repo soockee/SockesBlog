@@ -26,12 +26,20 @@ const User = props => (
     <InformationText>
       <h2 className="AboutName">Simon Stockhause</h2>
       <ul>
-        <li>Bachelorstudent an der Technischen Hochschule Mittelhessen</li>
-        <li>Aktuelle Projekte rund um...</li>
+        <li>Bachelorabschluss an der Technischen Hochschule Mittelhessen</li>
+          <ul><li>Abschlussarbeit: "Generierung und Ordnung von Events <br></br>in verteilten Systemen mit asynchroner Kommunikation"</li></ul>
+        <li>Masterstudent an der Technischen Hochschule Mittelhessen</li>
+        <li>Das mach ich ab und zu...</li>
         <ul>
           <li>Cloudcomputing</li>
+          <li>Infrastructure as Code</li>
           <li>Observability von (verteilten) Computersystemen</li>
           <li>Computer Vision</li>
+          <li>Unreal Engine </li>
+          <li>Gaming</li>
+          <li>Okinawa Goju Ryu Karate / Jiu Jitsu / Hapkido</li>
+          <li>Bass / Gitarre</li>
+          
         </ul>
       </ul>
     </InformationText>

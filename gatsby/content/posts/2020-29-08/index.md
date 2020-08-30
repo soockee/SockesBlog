@@ -4,7 +4,7 @@ cover: "./guy_on_pc.jpg"
 date: "2020-08-29"
 title: "Inventory System in Unreal Engine 4"
 published: true
-tags: ['Game Dev', 'Unreal Engine',]
+tags: ['Game Dev', 'Unreal Engine', 'Inventory System']
 ---
 
 Ich wollte also nun irgendwas programmieren, anstatt Boxen zu platzieren, verschiebene und irgendwie groß und klein zu machen.
