@@ -6,7 +6,7 @@ import styled from '@emotion/styled';
 import { Header } from 'components';
 import { Layout } from 'layouts';
 import Profil from "../../static/logo/Profil.jpg"
-
+import Thesis from "../../static/pdf/thesis.pdf"
 
 const Wrapper = styled.div`
   display: flex;
@@ -27,7 +27,10 @@ const User = props => (
       <h2 className="AboutName">Simon Stockhause</h2>
       <ul>
         <li>Bachelorabschluss an der Technischen Hochschule Mittelhessen</li>
-          <ul><li>Abschlussarbeit: "Generierung und Ordnung von Events <br></br>in verteilten Systemen mit asynchroner Kommunikation"</li></ul>
+          <ul>
+            <li>Abschlussarbeit: "Generierung und Ordnung von Events <br></br>in verteilten Systemen mit asynchroner Kommunikation"</li>
+            <li><a href={Thesis}> Link zur Bachelorarbeit</a></li>
+          </ul>
         <li>Masterstudent an der Technischen Hochschule Mittelhessen</li>
         <li>Das mach ich ab und zu...</li>
         <ul>

@@ -52,7 +52,7 @@ const NavBar = () => {
                 onMouseOut={() => {
                   setHoverInsta(false);
                 }}
-                bgColor={ (!hoverInsta)  ? theme.colors.white.base : theme.colors.black.base }
+                bgColor={!hoverInsta  ? theme.colors.white.base : theme.colors.black.base }
         />
         <SocialIcon url="https://github.com/Soockee"
                  onMouseOver={() => {
@@ -61,7 +61,7 @@ const NavBar = () => {
                 onMouseOut={() => {
                   setHoverGithub(false);
                 }}
-                bgColor={ (!hoverGithub) ? theme.colors.white.base : theme.colors.black.base }
+                bgColor={!hoverGithub ? theme.colors.white.base : theme.colors.black.base }
         />
       </SocialMedia>
       </Nav>
