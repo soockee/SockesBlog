@@ -16,7 +16,7 @@ RUN npm install
 # Syslink for serving gatsby site by nginx
 RUN gatsby build
 RUN rm /usr/share/nginx/html/index.html
-RUN mv /home/blog/public/* /usr/share/nginx/html
+#RUN mv /home/blog/public/* /usr/share/nginx/html
 
 COPY nginx.conf /etc/nginx/nginx.conf
 ##COPY default.conf /etc/nginx/conf.d/default.conf

@@ -28,7 +28,6 @@ const Nav = styled.nav`
     }
   }
 `;
-
 const SocialMedia = styled.div`
   display: flex;
   justify-content: flex-end;
@@ -37,7 +36,6 @@ const SocialMedia = styled.div`
 const NavBar = () => {
   const [hoverInsta, setHoverInsta] = useState(false);
   const [hoverGithub, setHoverGithub] = useState(false);
-  var [insta, github] = false;
   return (
     <Headroom calcHeightOnResize disableInlineStyles>
       <Nav>
@@ -55,7 +53,7 @@ const NavBar = () => {
                 bgColor={!hoverInsta  ? theme.colors.white.base : theme.colors.black.base }
         />
         <SocialIcon url="https://github.com/Soockee"
-                 onMouseOver={() => {
+                onMouseOver={() => {
                   setHoverGithub(true);
                 }}
                 onMouseOut={() => {

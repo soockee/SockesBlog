@@ -4,7 +4,7 @@ cover: "./schedule.jpg"
 date: "2020-08-30"
 title: "Daily Routine"
 published: true
-tags: ['Game Dev', 'Unreal Engine',]
+tags: ['Game Dev', 'Unreal Engine']
 ---
 
 Übung macht den Meister. Practice Practice Practice. Angst sollte man nicht vor denjeninge haben der einmal 1000 Kicks geübt hat, sonder vor dem, der einen Kick 1000 mal geübt hat. Wer oft schießt...trifft das Ziel.
