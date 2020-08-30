@@ -19,5 +19,5 @@ RUN rm /usr/share/nginx/html/index.html
 RUN mv /home/blog/public/* /usr/share/nginx/html
 
 COPY nginx.conf /etc/nginx/nginx.conf
-##COPY default.conf /etc/nginx/conf.d/default.conf
-EXPOSE 80
+#COPY default.conf /etc/nginx/conf.d/default.conf
+EXPOSE 80 443
