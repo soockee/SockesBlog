@@ -11,7 +11,23 @@ const StyledLink = styled(Link)`
   align-items: center;
 `;
 
+const SocialWrapper = styled.div`
+  @media  (max-width: ${props => props.theme.breakpoints.ss}) {
+    display:none;
+  }
+  @media  (max-width: ${props => props.theme.breakpoints.xs}) {
+    display:none;
+  }
+  @media  (max-width: ${props => props.theme.breakpoints.xxs}) {
+    display:none;
+  }
+`;
 const Nav = styled.nav`
+  @media  (max-width: ${props => props.theme.breakpoints.xxs}) {
+    font-size: 1.0rem;
+    justify-content: start;
+    margin-left: 0rem;
+  }
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
@@ -23,17 +39,6 @@ const Nav = styled.nav`
     margin-left: 1rem;
     transition: all ${props => props.theme.transitions.default.duration};
     
-  }
-  @media only screen (max-width: ${props => props.theme.breakpoints.m}) {
-    div.a {
-      display:none;
-    }
-  }
-
-  @media only screen (max-width: ${props => props.theme.breakpoints.s}) {
-    div a {
-      display:none;
-    }
   }
   a {
     color: ${props => props.theme.colors.white.base};
@@ -52,7 +57,9 @@ const NavBar = () => {
         <StyledLink to="/">Home</StyledLink>
         <StyledLink to="/blog">Blog</StyledLink>
         <StyledLink to="/about">About</StyledLink>
-        <SocialMedia></SocialMedia>
+        <SocialWrapper>
+          <SocialMedia></SocialMedia>
+        </SocialWrapper>
       </Nav>
     </Headroom>
   );

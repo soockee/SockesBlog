@@ -60,7 +60,9 @@ export const theme = {
   gradient,
   shadow,
   breakpoints: {
+    xxs: '300px',
     xs: '400px',
+    ss: '510px',
     s: '600px',
     m: '900px',
     l: '1200px',
