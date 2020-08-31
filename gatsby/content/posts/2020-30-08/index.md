@@ -33,10 +33,10 @@ Daily Routine:
 * Beleuchte das Haus.
 
 
-![](./haus_mit_dach.png)
-![](./haus_ohne_dach.png)
-![](./Lampen.png)
-![](./Lampen_innen.png)
+![haus_mit_dach](./haus_mit_dach.png)
+![haus_ohne_dach](./haus_ohne_dach.png)
+![Lampen](./Lampen.png)
+![Lampen_innen](./Lampen_innen.png)
 
 
 
