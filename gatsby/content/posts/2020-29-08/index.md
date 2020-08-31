@@ -29,9 +29,9 @@ Der erste Teil der Initialisierungsfunktion kümmert sich darum, dass die HUD Re
 
 ![initInv_0](./initInv_0.png)
 
-Der zweite Teil beschäftigt sich mit der Generierung der Slots anhand der gegeforderten Anzahl, die als Parameter beigegeben wurde. Mittels For-Schleife wird bis zum erreichen des Parameters ein Inventory_Slot erstellt. Jedem Invetory_Slot wird sein index als ID mitgegeben. Der neu erstelle Inventory_Slot wird dem Array Inventory_Slots im Inventory Panel hinzugefügt. Durch die *Add_Child_to_Wrap_Box* Funktion wird automatisch bei überschreitenden Größen ein Umbruch im Inventar durchgeführt. Anschließend wird eine Ausgabe getätigt, damit man weiß, das etwas passiert ist.
+Der zweite Teil beschäftigt sich mit der Generierung der Slots anhand der gegeforderten Anzahl, die als Parameter beigegeben wurde. Mittels For-Schleife wird bis zum erreichen des Parameters ein Inventory\_Slot erstellt. Jedem Invetory\_Slot wird sein index als ID mitgegeben. Der neu erstelle Inventory\_Slot wird dem Array Inventory\_Slots im Inventory Panel hinzugefügt. Durch die *Add\_Child\_to_Wrap_Box* Funktion wird automatisch bei überschreitenden Größen ein Umbruch im Inventar durchgeführt. Anschließend wird eine Ausgabe getätigt, damit man weiß, das etwas passiert ist.
 
-Im Fall, dass GI_Inventory bereits Items beinhaltet, werden die Daten aus dem Speicher geladen, der in GI_Inventory geführt wird und dazu genutzt, die Slots mit item zu füllen.
+Im Fall, dass GI_Inventory bereits Items beinhaltet, werden die Daten aus dem Speicher geladen, der in GI\_Inventory geführt wird und dazu genutzt, die Slots mit item zu füllen.
 Falls keine Daten im GI_Inventory vorhanden sein sollte, werden diese als leeren Element dem Speicher hinzugefügt. Das passiert meist bei der Initialisierung
 
 ![initInv_0](./initInv_0.png)
