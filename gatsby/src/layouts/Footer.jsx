@@ -30,9 +30,7 @@ const Footer = () => (
   <Wrapper>
     <SocialMedia></SocialMedia>
     <Text>
-      <span>
-        Sockes Blog
-      </span>
+      <span>Sockes Blog</span>
     </Text>
   </Wrapper>
 );

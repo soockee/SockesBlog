@@ -4,11 +4,10 @@ import PropTypes from 'prop-types';
 import styled from '@emotion/styled';
 import prism from '../styles/prism';
 
-
 import { Header } from 'components';
 import { Layout } from 'layouts';
-import Profil from "../../static/logo/Profil.jpg"
-import Thesis from "../../static/pdf/thesis.pdf"
+import Profil from '../../static/logo/Profil.jpg';
+import Thesis from '../../static/pdf/thesis.pdf';
 
 const Wrapper = styled.div`
   display: flex;
@@ -82,30 +81,35 @@ const WrapperText = styled.div`
   flex-direction: row;
   align-items: start;
   justify-content: space-around;
-  padding:5px;
+  padding: 5px;
 `;
 
 const InformationText = styled.div`
   position: relative;
-  margin:5px;
+  margin: 5px;
 `;
 
 const User = props => (
   <Wrapper>
     <WrapperProfil>
-        <h2 className="AboutName">Simon Stockhause</h2>
+      <h2 className="AboutName">Simon Stockhause</h2>
     </WrapperProfil>
     <WrapperProfil>
-      <img src={Profil} width={256} height={256} alt="Profilbild"/>
+      <img src={Profil} width={256} height={256} alt="Profilbild" />
     </WrapperProfil>
     <WrapperText>
       <InformationText>
         <ul>
           <li>Bachelorabschluss an der Technischen Hochschule Mittelhessen</li>
-            <ul>
-              <li>Abschlussarbeit: "Generierung und Ordnung von Events <br></br>in verteilten Systemen mit asynchroner Kommunikation"</li>
-              <li><a href={Thesis}> Link zur Bachelorarbeit</a></li>
-            </ul>
+          <ul>
+            <li>
+              Abschlussarbeit: "Generierung und Ordnung von Events <br></br>in
+              verteilten Systemen mit asynchroner Kommunikation"
+            </li>
+            <li>
+              <a href={Thesis}> Link zur Bachelorarbeit</a>
+            </li>
+          </ul>
           <li>Masterstudent an der Technischen Hochschule Mittelhessen</li>
         </ul>
       </InformationText>
@@ -126,19 +130,18 @@ const User = props => (
       </InformationText>
     </WrapperText>
   </Wrapper>
-)
+);
 
 export default () => {
   return (
     <Layout>
       <Helmet title={'About Page'} />
       <Header title="About Page"></Header>
-      <User/ >
+      <User />
     </Layout>
-  )
-}
+  );
+};
 
 //export default About;
-
 
 //<Header title="About Page">Hi! I bims der Simon</Header>

@@ -1,14 +1,14 @@
 {
-  "name": "gatsby-tutorial-starter",
-  "author": "Justin Formentin",
-  "title": "Gatsby V2 Tutorial Starter",
-  "description": "My Blog",
-  "homepage": "https://gatsby-tutorial-starter.netlify.com",
+  "name": "sockesblog",
+  "author": "Simon Stockhase",
+  "title": "Sockes Blog",
+  "description": "Sockes Blog about all stuff",
+  "homepage": "https://socke.xyz",
   "license": "MIT",
-  "version": "0.0.7",
+  "version": "0.0.1",
   "repository": {
     "type": "git",
-    "url": "https://github.com/justinformentin/gatsby-v2-tutorial-starter"
+    "url": "https://github.com/Soockee/SockesBlog"
   },
   "scripts": {
     "develop": "gatsby develop",
@@ -68,10 +68,9 @@
     "react-social-icons": "^4.1.0"
   },
   "keywords": [
-    "justin formentin",
+    "Simon Stockhause",
     "personal blog",
-    "tutorial",
     "gatsby",
-    "emotion"
+    "react"
   ]
 }

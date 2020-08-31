@@ -1,9 +1,8 @@
-import React,  { useState } from 'react';
+import React, { useState } from 'react';
 import { Link } from 'gatsby';
 import styled from '@emotion/styled';
 import Headroom from 'react-headroom';
 import SocialMedia from '../components/SocialMedia';
-
 
 const StyledLink = styled(Link)`
   display: flex;
@@ -12,19 +11,19 @@ const StyledLink = styled(Link)`
 `;
 
 const SocialWrapper = styled.div`
-  @media  (max-width: ${props => props.theme.breakpoints.ss}) {
-    display:none;
+  @media (max-width: ${props => props.theme.breakpoints.ss}) {
+    display: none;
   }
-  @media  (max-width: ${props => props.theme.breakpoints.xs}) {
-    display:none;
+  @media (max-width: ${props => props.theme.breakpoints.xs}) {
+    display: none;
   }
-  @media  (max-width: ${props => props.theme.breakpoints.xxs}) {
-    display:none;
+  @media (max-width: ${props => props.theme.breakpoints.xxs}) {
+    display: none;
   }
 `;
 const Nav = styled.nav`
-  @media  (max-width: ${props => props.theme.breakpoints.xxs}) {
-    font-size: 1.0rem;
+  @media (max-width: ${props => props.theme.breakpoints.xxs}) {
+    font-size: 1rem;
     justify-content: start;
     margin-left: 0rem;
   }
@@ -38,7 +37,6 @@ const Nav = styled.nav`
   div a {
     margin-left: 1rem;
     transition: all ${props => props.theme.transitions.default.duration};
-    
   }
   a {
     color: ${props => props.theme.colors.white.base};
@@ -66,6 +64,3 @@ const NavBar = () => {
 };
 
 export default NavBar;
-// instagramURL: "https://www.instagram.com/sockeod/",
-// githubURL: "https://github.com/Soockee",
-// stackoverflowURL: "https://stackoverflow.com/users/7383590/socke",
