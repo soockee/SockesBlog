@@ -1,5 +1,6 @@
 import React from 'react';
 import styled from '@emotion/styled';
+import SocialMedia from '../components/SocialMedia';
 
 const Wrapper = styled.footer`
   position: relative;
@@ -12,6 +13,10 @@ const Wrapper = styled.footer`
   @media (max-width: ${props => props.theme.breakpoints.s}) {
     padding-top: 7rem;
   }
+
+  div a {
+    align-self
+  }
 `;
 
 const Text = styled.div`
@@ -23,6 +28,7 @@ const Text = styled.div`
 
 const Footer = () => (
   <Wrapper>
+    <SocialMedia></SocialMedia>
     <Text>
       <span>
         Sockes Blog
