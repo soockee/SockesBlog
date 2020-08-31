@@ -44,4 +44,4 @@ Zu guter Letzt habe ich entdeckt, dass man Darstellungen an Variablen **binden**
 Das Ergebnis ist folgendermaßen. Die Coolen Icons, die ich mir aus dem Marketplace runtergeladen habe, kommen endlich zum Einsatz. Die Icons sind durch den darunterliegenden Button auch anklickbar. Das ist durch die Ausgegebenen String Links Oben ersichtlich.
 ![inventory](./inventory.gif)
 
-Leider sind zu diesem Zeitpunk keine weiterführenden Youtube Videos mehr von Garrett Fredley da gewesen, weshalb der Beschriebene Teil selbst gemacht werden musste. Das macht das Ganze natürlich etwas langwieriger. Aber der Umgang mit Blueprint, der UE, dem Debugger etc. sind definitv sicherer geworden.
+Leider sind zu diesem Zeitpunk keine weiterführenden Youtube Videos mehr von Garrett Fredley da gewesen, weshalb der in diesem Post gezeigte Teil selbst gemacht werden musste. Das macht das Ganze natürlich etwas langwieriger. Aber der Umgang mit Blueprint, der UE, dem Debugger etc. ist dadurch definitv sicherer geworden. =D

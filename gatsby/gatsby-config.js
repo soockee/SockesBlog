@@ -7,6 +7,10 @@ module.exports = {
   plugins: [
     'gatsby-plugin-react-helmet',
     'gatsby-plugin-catch-links',
+    'gatsby-plugin-offline',
+    'gatsby-transformer-sharp',
+    'gatsby-plugin-sharp',
+    'gatsby-plugin-sitemap',
     {
       resolve: 'gatsby-source-filesystem',
       options: {
@@ -14,7 +18,6 @@ module.exports = {
         path: `${__dirname}/content/posts`,
       },
     },
-    'gatsby-transformer-sharp',
     {
       resolve: 'gatsby-transformer-remark',
       options: {
@@ -24,42 +27,19 @@ module.exports = {
             options: {
               maxWidth: 750,
               quality: 90,
-              linkImagesToOriginal: true,
+              linkImagesToOriginal: false,
             },
           },
+          'gatsby-remark-copy-linked-files',
           'gatsby-remark-prismjs',
         ],
       },
     },
-    'gatsby-transformer-sharp',
-    'gatsby-plugin-sharp',
     {
       resolve: 'gatsby-source-filesystem',
       options: {
         name: 'images',
         path: `${__dirname}/static/logo`,
-      },
-    },
-    `gatsby-plugin-sharp`,
-    {
-      resolve: `gatsby-transformer-remark`,
-      options: {
-        plugins: [
-          {
-            resolve: `gatsby-remark-images`,
-            options: {
-              maxWidth: 800,
-              quality: 90,
-              linkImagesToOriginal: true,
-            },
-          },
-        ],
-      },
-    },
-    {
-      resolve: `gatsby-source-filesystem`,
-      options: {
-        path: `${__dirname}/content/posts`,
       },
     },
     {
@@ -75,22 +55,19 @@ module.exports = {
       options: {
         pathToConfigModule: 'config/typography.js',
       },
+  },
+  {
+    resolve: 'gatsby-plugin-manifest',
+    options: {
+      name: config.title,
+      short_name: config.shortName,
+      description: config.description,
+      start_url: config.pathPrefix,
+      background_color: config.backgroundColor,
+      theme_color: config.themeColor,
+      display: 'standalone',
+      icon: config.favicon,
     },
-    'gatsby-plugin-sharp',
-    'gatsby-plugin-sitemap',
-    {
-      resolve: 'gatsby-plugin-manifest',
-      options: {
-        name: config.title,
-        short_name: config.shortName,
-        description: config.description,
-        start_url: config.pathPrefix,
-        background_color: config.backgroundColor,
-        theme_color: config.themeColor,
-        display: 'standalone',
-        icon: config.favicon,
-      },
-    },
-    'gatsby-plugin-offline',
+  },
   ],
 };
