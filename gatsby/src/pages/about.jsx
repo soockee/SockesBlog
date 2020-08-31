@@ -1,6 +1,5 @@
 import React from 'react';
 import Helmet from 'react-helmet';
-import PropTypes from 'prop-types';
 import styled from '@emotion/styled';
 import prism from '../styles/prism';
 
@@ -89,7 +88,7 @@ const InformationText = styled.div`
   margin: 5px;
 `;
 
-const User = props => (
+const User = () => (
   <Wrapper>
     <WrapperProfil>
       <h2 className="AboutName">Simon Stockhause</h2>
@@ -103,8 +102,8 @@ const User = props => (
           <li>Bachelorabschluss an der Technischen Hochschule Mittelhessen</li>
           <ul>
             <li>
-              Abschlussarbeit: "Generierung und Ordnung von Events <br></br>in
-              verteilten Systemen mit asynchroner Kommunikation"
+              Abschlussarbeit: Generierung und Ordnung von Events <br></br>in
+              verteilten Systemen mit asynchroner Kommunikation
             </li>
             <li>
               <a href={Thesis}> Link zur Bachelorarbeit</a>
@@ -132,7 +131,7 @@ const User = props => (
   </Wrapper>
 );
 
-export default () => {
+const About = () => {
   return (
     <Layout>
       <Helmet title={'About Page'} />
@@ -142,6 +141,6 @@ export default () => {
   );
 };
 
-//export default About;
+export default About;
 
 //<Header title="About Page">Hi! I bims der Simon</Header>
