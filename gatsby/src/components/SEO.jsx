@@ -86,8 +86,6 @@ const SEO = ({ title, description, banner, pathname, article }) => (
             <meta name="image" content={seo.image} />
             <meta name="apple-mobile-web-app-title" content={shortName} />
             <meta name="application-name" content={shortName} />
-            {/* meta: viewport google audit*/}
-            <meta name="viewport" content="width=device-width, initial-scale=1"></meta>
             <script type="application/ld+json">
               {JSON.stringify(schemaOrgJSONLD)}
             </script>
