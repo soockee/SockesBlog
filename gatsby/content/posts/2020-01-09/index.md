@@ -12,7 +12,7 @@ So wieder mal an was neues wagen. Diese Seite hier habe ich mit Gatsby gebaut. G
 Github Pages scheint eine super Integration mit Jekyll zu haben. Deswegen wird das auch direkt ausprobiert. 
 
 ## Warum auf einmal Githup Pages?
-Aufgrund der bedüftigen Situation als Student hat Github erwärmenderweise unglaublich viele Angebote, um uns arme Schlucker zu unterstüzen und zu fördern. Darunter fällt z.B. Github Pro, eine free Namespace Domain mit Github Pages support und vieles vieles mehr. Ein Kumpel hat mich auf auf dieses Angebot aufmerksam gemacht. Und wie heißt es so schön: * Einem geschenkten Gaul, guckt man nicht ins Maul*
+Aufgrund der bedüftigen Situation als Student hat Github erwärmenderweise unglaublich viele Angebote, um uns arme Schlucker zu unterstüzen und zu fördern. Darunter fällt z.B. Github Pro, eine free Domain von Namecheap.com mit Github Pages support und vieles vieles mehr. Ein Kumpel hat mich auf auf dieses Angebot aufmerksam gemacht. Und wie heißt es so schön: *Einem geschenkten Gaul, guckt man nicht ins Maul*
 
 Zuerst habe ich mir ein kurzes Intro Video angeschaut, um einen Überblick zu gewinnen. [Link zum Jekyll und Github Pages Tutorial](https://www.youtube.com/watch?v=SWVjQsvQocA)
 
