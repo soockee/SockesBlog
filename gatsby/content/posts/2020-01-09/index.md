@@ -69,7 +69,7 @@ Unhandled rejection Error: spawn ENOENT
     at Process.ChildProcess._handle.onexit (child_process.js:771:34)
 ```
 
-Die Funktion ist also für das Generieren der Seite verantwortlich und hat Probleme mit spawn. Btw ENOENT bedeutet für Normalsterbliche *Error NO ENTry* Kein Directory oder ähnliches also. Kann ich nicht viel mit anfangen. Nachgooglen und fündig werden. Die genutzte Funktion cp.spawn funktioniert nicht. cp ist in dem Fall der import child_process.js. Scheint ein Plattform problem zu sein und man solle doch cross_spawn nutzen. Gesagt getan.
+Die Funktion ist also für das Generieren der Seite verantwortlich und hat Probleme mit spawn. Btw ENOENT bedeutet für Normalsterbliche *Error NO ENTry* Kein Directory oder ähnliches also. Kann ich nicht viel mit anfangen. Nachgooglen und fündig werden. Die genutzte Funktion cp.spawn funktioniert nicht. cp ist in dem Fall der import child\_process.js. Scheint ein Plattform problem zu sein und man solle doch cross\_spawn nutzen. Gesagt getan.
 * cp import gelöscht
 * cp an den Stellen gelöscht, an den es genutzt wurde.
 * folgenden Code eingefügt, der die spawn funktion ersetzt.
