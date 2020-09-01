@@ -4,7 +4,7 @@ cover: "./papier-skizze.jpg"
 date: "2020-09-01"
 title: "Building the Resource War Webpage with Jekyll on Github Pages pt.1"
 published: true
-tags: ['Web Development', 'Game Development', 'Jekyll', 'Ruby', 'Node']
+tags: ['Web Dev', 'Game Dev', 'Jekyll', 'Ruby', 'Node', 'Website']
 ---
 
 So wieder mal an was neues wagen. Diese Seite hier habe ich mit Gatsby gebaut. Gatsby ist cool, neu und fresh. Zudem ist Gatsby mega modular und hat GraphQL integriert. Aber es gibt auch noch andere Static Site Generatoren.
