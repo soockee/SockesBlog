@@ -73,7 +73,19 @@ module.exports = {
       theme_color: config.themeColor,
       display: 'standalone',
       icon: config.favicon,
+      icons: [
+        {
+          src: config.favicon144,
+          sizes:  config.favicon144Size,
+          type: config.favicon144Type,
+        },
+        {
+          src: config.favicon512,
+          sizes: config.favicon512Size,
+          type: config.favicon512Type,
+        },
+      ]
     },
-  },
+  }
   ],
 };
