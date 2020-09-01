@@ -1,5 +1,5 @@
 ---
-path: "/jekyll-github-pages"
+path: "/jekyll-github-pages-pt1"
 cover: "./papier-skizze.jpg"
 date: "2020-09-01"
 title: "Building the Resource War Webpage with Jekyll on Github Pages pt.1"
