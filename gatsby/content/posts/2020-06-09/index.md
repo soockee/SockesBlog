@@ -46,7 +46,7 @@ Angelegt werden 2 **A Records**
 Nun kann man die Maschine über die Domain anpingen und schauen, ob das ganze geklappt hat.
 
 **DNS Records in DC**
-![digitalOcean DNS](./digitalOcean.png)
+![digitalOcean DNS](./digitalOcean2.png)
 
 
 ## NGINX installieren und konfigurieren
