@@ -44,7 +44,7 @@ Mit Gulp also den Development Workflow starten. Das Tool geht seine Tasks durch.
 
 Die Funktion **jekyllDev** macht Probleme. Schauen wir sie uns mal an.
 
-```
+```javascript
 /**
  * Build Jekyll site
  */

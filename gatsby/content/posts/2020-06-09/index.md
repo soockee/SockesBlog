@@ -60,7 +60,7 @@ So also die initiale Konfiguration. Alles was an HTTP rein kommt, wird erstmal a
 
 Damit ist schonmal ein HTTPS gegeben. Aber das der Browser sich beschwert, wenn er die URL öffnet ist nicht schön. Deswegen also mit Letsencrypt ein richtiges Zertifikat anschaffen.
 
-```
+```conf
 # https Server
 #
 #
@@ -107,7 +107,7 @@ Damit ist schonmal ein HTTPS gegeben. Aber das der Browser sich beschwert, wenn 
 Das bedeutet wir haben die docker-compose.yml und starten den ganzen Spaß direkt mit ```docker-compose up```. 
 
 
-```
+```yaml
 version: '2'
 
 services:
@@ -176,7 +176,7 @@ Der letzte Schritt. Das hatte ich mir so viel schwerer vorgestellt, aber der Pro
 
 Ich ruf die Domain auf und **bäm** es funktioniert alles auf Anhieb. Selten sowas.
 
-```
+```yaml
 # roles/letsencrypt/tasks/main.yml
 ---
 - name: Update and upgrade apt packages
@@ -185,9 +185,9 @@ Ich ruf die Domain auf und **bäm** es funktioniert alles auf Anhieb. Selten sow
     update_cache: yes
     cache_valid_time: 86400 #One day
 
-#- name: install lets Encrypt Repository
-#  command: |
-#    curl -o- https://raw.githubusercontent.com/vinyll/certbot-install/master/install.sh | bash
+- name: install lets Encrypt Repository
+ command: |
+   curl -o- https://raw.githubusercontent.com/vinyll/certbot-install/master/install.sh | bash
 
 - name: obtaining SSL Cert
   command: |
