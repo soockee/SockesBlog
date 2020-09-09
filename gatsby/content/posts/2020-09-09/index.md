@@ -1,6 +1,6 @@
 ---
 path: "/inventory-system-ue4-pt3"
-cover: "./hexagon.jpg"
+cover: "./hexgon.jpg"
 date: "2020-09-09"
 title: "Inventory System pt.3 Unreal Engine 4"
 published: true
