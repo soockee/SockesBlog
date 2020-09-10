@@ -1,6 +1,6 @@
 ---
 path: "/pointcloud-introduction"
-cover: "./cliud.jpg"
+cover: "./cloud.jpg"
 date: "2020-09-10"
 title: "Pointcloud Introduction"
 published: true
