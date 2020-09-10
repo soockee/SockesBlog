@@ -50,12 +50,8 @@ Blog.propTypes = {
 };
 
 export const query = graphql`
-  query {
-    allMarkdownRemark(
-      sort: { order: DESC, fields: [frontmatter___date] }
-      filter: { frontmatter: { published: { eq: "true" } }
-    ) 
-      {
+  {
+    allMarkdownRemark(sort: {order: DESC, fields: [frontmatter___date]}, filter: {frontmatter: {published: {eq: true}}}) {
       edges {
         node {
           id
@@ -65,17 +61,6 @@ export const query = graphql`
             path
             tags
             date(formatString: "MM.DD.YYYY")
-            cover {
-              childImageSharp {
-                fluid(
-                  maxWidth: 1000
-                  quality: 90
-                  traceSVG: { color: "#4b4e57" }
-                ) {
-                  ...GatsbyImageSharpFluid_withWebp_tracedSVG
-                }
-              }
-            }
           }
         }
       }
