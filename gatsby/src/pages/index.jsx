@@ -74,6 +74,7 @@ export const query = graphql`
     allMarkdownRemark(
       limit: 6
       sort: { order: DESC, fields: [frontmatter___date] }
+      filter: { frontmatter: { published: { eq: "true" } }
     ) {
       edges {
         node {
