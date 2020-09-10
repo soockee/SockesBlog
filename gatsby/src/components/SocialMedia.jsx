@@ -10,7 +10,12 @@ const Wrapper = styled.div`
   justify-content: center;
   align-items: start;
 `;
-const SocialMedia = ({ instagramURL, githubURL,linkedinURL, socialIconStyle }) => {
+const SocialMedia = ({
+  instagramURL,
+  githubURL,
+  linkedinURL,
+  socialIconStyle,
+}) => {
   var socialIconStyleAssign = Object.assign({}, socialIconStyle.display);
   const [hoverInsta, setHoverInsta] = useState(false);
   const [hoverGithub, setHoverGithub] = useState(false);

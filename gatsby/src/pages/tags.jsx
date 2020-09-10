@@ -1,15 +1,15 @@
 import React from 'react';
-import { graphql } from 'gatsby'
+import { graphql } from 'gatsby';
 import PropTypes from 'prop-types';
 import { Layout, Container } from 'layouts';
 import { Header, TagsBlock } from 'components';
 
 const Tags = ({ data }) => {
-  const tagquery  = data.tags.group;
+  const tagquery = data.tags.group;
   let tags = [];
-  tagquery.forEach( (t) => {
+  tagquery.forEach(t => {
     tags.push(t.tag);
-  })
+  });
 
   // Maybe add implementation to size each tag by its count
   // tags.forEach((t) => {
@@ -32,6 +32,11 @@ const Tags = ({ data }) => {
 export default Tags;
 
 Tags.propTypes = {
+  data: PropTypes.shape({
+    tags: PropTypes.shape({
+      group: PropTypes.array,
+    }),
+  }),
   pageContext: PropTypes.shape({
     tags: PropTypes.array,
   }),
@@ -46,4 +51,4 @@ export const query = graphql`
       }
     }
   }
-`
+`;
