@@ -26,7 +26,7 @@ Photogrammetry ist ein Prozess der Bildverarbeitung. Ein Objekt, welches aus ein
 
 ## Wofür werden Punktwolken eingesetzt?
 
-Der Hauptfokus von Punktwolken ist das Erstellen von 3D-Modellen. Die Punktwolke selbst kann als 3D-Modell dargestellt werden. Allerdings werden die Punktwolken oftmals in Polygonnetzte umgewandelt, da die unterstützung von Punktwolken in 3D-Verarbeitungssoftware noch in ihren Anfangen steckt.
+Der Hauptfokus von Punktwolken ist das Erstellen von 3D-Modellen. Die Punktwolke selbst kann als 3D-Modell dargestellt werden. Allerdings werden die Punktwolken auch gerne in Polygonnetzte umgewandelt. Gründe würde ich daher ableiten, dass die viele mit Polygon Meshes vertraut sind.
 
 Die Modelle können anschließend für verschiedene Messungen genutzt werden. Darunter zählt z.B. das Messen einer Distanz, das Messen von Flächen oder das Messen von Volumenen. Diese Messungen sind im speziellen z.B. im Gebäudebau oder des Monitoring von Zugstrecken sehr nützlich. 
 
