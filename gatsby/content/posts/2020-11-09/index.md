@@ -31,44 +31,51 @@ Für Serverseitige Datenverarbeitung bietet sich der einfache Block Storage an.
 
 ## Verteilte Dateisysteme
 
-Verteilte Dateisysteme unterscheiden sich konzeptionell stark von Block Storage und Object Storage. 
+Verteilte Dateisysteme unterscheiden sich konzeptionell stark von Block Storage und Object Storage. Verteilte Dateisysteme müssen ähnliche Eigenschaften aufweisen wie Lokale Dateisysteme, aber über mehrere Systeme hinweg funktionieren.
 
-Ein lokales Dateisystem weißt unter Unix eine Hierarchie auf. Das Dateisystem nutzt dabei den verfügbaren Speicher eines Speichermediums, wie z.B. einer HDD und Organisiert dieses.
-In der Unix-Welt sorgt das Dateisystem für die Verwaltung der Dateien mittels *Inodes*. Inodes halten Daten über Daten. Metadaten also. 
+Das Konzept von Verteilten Dateisystemen wird anhand von [BeeGFS](https://www.beegfs.io) gezeigt. BeeGFS ist ein verteiltes Dateisystem, welches von einem Institut der Fraunhofer Gesellschaft entwickelt worden ist. 
 
-**Blog Hierarchie**
-```shell
-.
-├── Dockerfile
-├── LICENSE
-├── README.md
-├── README.rst
-├── default.conf
-├── docker-compose.yml
-├── gatsby
-│   ├── LICENSE
-│   ├── README.md
-│   ├── config
-│   ├── content
-│   ├── gatsby-config.js
-│   ├── gatsby-node.js
-│   ├── node_modules
-│   ├── package-lock.json
-│   ├── package.json
-│   ├── public
-│   ├── src
-│   └── static
-├── html
-│   └── index.html
-├── img
-│   └── Logo.png
-├── migrate.sh
-└── nginx.conf
+Applikationen sollen die Möglichkeit geboten bekommen eine POSIX-like Schnittstelle zu dem Dateisystem zu haben. Das heißt es wird sich von Datenbank-spezifischen Applikationsimplementierungen abgelöst. Dabei soll Applikation, die entsprechend auf pysikalisch unterschiedlichen Maschinen laufen, das selbe Dateisystem nutzen können. Im Gegensatz zu lokalen Dateisystemen muss nun unter anderem das Netzwerk berücksichtigt werden. Viele Schwierigkeiten wie Dateisynchronisationen und Pfadauflösungen entstehen, die ein ausgereifstes verteiltes Dateisystem lösen muss. Die Architektur besteht aus vier Komponenten. Ein Managment Server, mindestens ein Metadata Server, mindestens ein Storage Server und beliebig viele Clients. 
+
+Der Managment Service dient als *Meeting Point* für alle teilnehmenden Komponenten. Der Mangment Service führt und verwaltet eine Liste der anderen BeeGFS Services und deren Zustand. Da der Service sehr leichtgewichtig ist, besteht die Möglichkeit ihn auf einem Server zu deployen, auf dem andere BeeGFS Komponenten laufen werden.
+
+Ein Metadata Service speichert Informationen über Dateien. Die Metadaten die aus einem Lokalen Dateisystem bekannte sind, e.g. Ownership, Zugriffsrechte, File Location etc. werden von dem Metadata Service verwaltet und die Clienten bei Anfragen zu der erfragen Datei geführt. Die Location einer Datei ist nicht ganz einfach. Datein werden aufgeteilt. Dies geschieht über ein sog **Stripe Pattern**. Das Stripe Pattern verteilt Anteile einer Datei über die teilnehmenden Storages. Dies Kann Vor- und Nachteile haben. Falls Storages ausfallen entstehen (ohne replication etc. ) Schäden an den Dateien und demenstsprechend potentieller Dateiverlust. Striping kann zu einem Performanceanstieg führen, falls mehrere Knoten IO Operationen auf Dateien durchführen, die über mehrere Storages verteilt sind, da mehr IO Bandbreite genutzt wird.
+
+Ein Storage Service ist die Kompoenten, die die Dateien der Nutzer speichert. Die Dateien sind *gestriped* und werden **data chunk files** gennant. Der Storage Service funktioniert mit den gewöhnlichen lokalen POSIX Dateisystem unter Linux. Jeglicher RAM, welcher von anderen Prozessen nicht genutzt wird, wird für Caching verwendet.
+
+Die Metadata und die Storage Architektur basieren auf einem Scale-Out Design. Je mehr Instanzen an dem File System teilnehmen, desto größer ist die Performance.
+
+Der Client registriert sich mit dem Virtuellen Dateisystem Interface von Linux. Es wird ein Custom Linux Kernel benötigt, der allerdings vollig automatisch von dem BeeGFS CLient installiert und configuriert wird. 
+
+
+### Anwendungsfälle 
+**Architektur von BeeGFS**
+![Architecture](./BeeGFS-Architecture.png)
+**Imagesource: *An Introduction to BeeGFS by Frank Herold, Sven Breuner June 2018***
+
+
+
+
+### Weitere Distributed Filesystems
+#### Hadoop Distributed File System (HDFS)
+
 ```
+HDFS is designed for large files with write-once, read-many semantics.
+```
+HDFS nutzt extrem große Blocksizes für die Dateien. Die *Chunks*, d.h. Teile **einer**  Datei sind 128MB groß. Im Kontrast haben lokale Dateisysteme Blockgrößen von z.B. 4KB
 
+HDFS ist nicht unter dem Aspekt der POSIX komptibilität designed worden. Deshalb werden verschiedene POSIX Semantiken nicht unterstützt. (e.g öffnen von existierenden Dateien um in diese zu schreiben).
+#### Ceph FS
+Ceph FS ist vielseitig und kann mit drei verschiedenen Interfaces angesprochen werden
+* Ceph Object Gateway
+* Ceph Block Device
+* Ceph File System
 
-Verteilte Dateisysteme müssen ähnliche Eigenschaften aufweisen, aber über mehrere Systeme hinweg funktionieren.
+Die Daten werden *zusammen* in dem Ceph Storage Cluster gelagert. 
 
+```
+Ceph FS, on the other hand is geared towards being a general-purpose distributed file system that can be used for a variety of applications deployed on a virtualized cluster. Ceph FS is a file system layered on top of a distributed object store. 
+``` 
 Sources: 
 * [Understanding Object Storage and Block Storage Use Cases](https://cloudacademy.com/blog/object-storage-block-storage/)
 
@@ -79,3 +86,5 @@ Sources:
 * [Amazon: When to choose efs](https://aws.amazon.com/de/efs/when-to-choose-efs/)
 
 * [A Survey of Distributed File System Technology By Jakob Blomer 2014](https://indico.cern.ch/event/258092/contributions/1588500/attachments/454164/629566/dfs.pdf)
+
+* [HDFS vs Ceph](https://docs.microsoft.com/en-us/learn/modules/cmu-case-study-distributed-file-systems/4-hadoop-versus-ceph)
