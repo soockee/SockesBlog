@@ -57,6 +57,7 @@ Der Client registriert sich mit dem Virtuellen Dateisystem Interface von Linux. 
 
 
 ### Weitere Distributed Filesystems
+
 #### Hadoop Distributed File System (HDFS)
 
 ```
