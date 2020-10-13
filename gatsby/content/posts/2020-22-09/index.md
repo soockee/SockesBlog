@@ -1,7 +1,7 @@
 ---
 path: "/cloud-data-storage-for-highly-parallel-applications"
-cover: "./railway-entwine-potree-screenshot.png"
-date: "2020-22-11"
+cover: "./files.jpg"
+date: "2020-22-09"
 title: "Cloud Data Storage for highly parallel applications"
 published: true
 tags: ['Software Engineering', 'Point Cloud', 'Research']
