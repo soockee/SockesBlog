@@ -1,7 +1,7 @@
 ---
 path: "/benchmarking-a-distributed-filesystem"
 cover: "./singapore-architecture.jpg"
-date: "2020-15-12"
+date: "2020-12-13"
 title: "Benchmarking a distributed filesystem"
 published: true
 tags: ['Software Engineering', 'Point Cloud', 'Research', 'Distributed Filesystem']
