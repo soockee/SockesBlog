@@ -1,15 +1,15 @@
 <p align="center">
-  <a href="https://socke.xyz">
+  <a href="https://not-so-dark.net">
     <img
       src="https://github.com/Soockee/SockesBlog/blob/master/img/Logo.png"
       height="160"
-      alt="Socke.xyz"
-      title="Socke.xyz"
+      alt="not-so-dark.net"
+      title="not-so-dark.net"
     />
   </a>
 </p>
 <p align="center">
-  <h1>Socke.xyz<h1>
+  <h1>not-so-dark.net<h1>
 </p>
 
 # Usage

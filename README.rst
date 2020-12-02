@@ -1,10 +1,10 @@
 <p align="center">
-  <a href="https://socke.xyz">
+  <a href="https://not-so-dark.net">
     <img
       src="https://github.com/Soockee/SockesBlog/tree/master/img/Logo.png"
       height="80"
-      alt="Socke.xyz"
-      title="Socke.xyz"
+      alt="not-so-dark.net"
+      title="not-so-dark.net"
     />
   </a>
 </p>

@@ -49,7 +49,6 @@ const Header = ({ children, title, date, cover }) => (
     <Img fluid={cover || {} || [] || ''} />
     */}
       <h3>{date}</h3>
-
       {children && <Subtitle>{children}</Subtitle>}
     </Text>
   </Wrapper>

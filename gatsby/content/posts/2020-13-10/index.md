@@ -1,7 +1,7 @@
 ---
 path: "/hadoop-spark-and-dfs"
 cover: "./feld-mit-rot.jpg"
-date: "2020-13-10"
+date: "2020-10-13"
 title: "Hadoop, Spark und Distributed File Systems"
 published: true
 tags: ['Software Engineering', 'Point Cloud', 'Research', 'Distributed Filesystem']

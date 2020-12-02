@@ -1,7 +1,7 @@
 ---
 path: "/cloud-data-storage-for-highly-parallel-applications"
 cover: "./files.jpg"
-date: "2020-22-09"
+date: "2020-09-22"
 title: "Cloud Data Storage for highly parallel applications"
 published: true
 tags: ['Software Engineering', 'Point Cloud', 'Research']
