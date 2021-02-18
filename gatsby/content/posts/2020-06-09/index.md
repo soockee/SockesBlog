@@ -60,7 +60,7 @@ So also die initiale Konfiguration. Alles was an HTTP rein kommt, wird erstmal a
 
 Damit ist schonmal ein HTTPS gegeben. Aber das der Browser sich beschwert, wenn er die URL öffnet ist nicht schön. Deswegen also mit Letsencrypt ein richtiges Zertifikat anschaffen.
 
-```conf
+```bash
 # https Server
 #
 #
