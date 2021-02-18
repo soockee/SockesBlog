@@ -3,11 +3,9 @@ path: "/benchmarking-a-distributed-filesystem"
 cover: "./singapore-architecture.jpg"
 date: "2020-12-13"
 title: "Benchmarking a distributed filesystem"
-published: true
+published: false
 tags: ['Software Engineering', 'Point Cloud', 'Research', 'Distributed Filesystem']
 ---
-
-[WIP]
 
 Notizen:
 DFS: *beegfs*
