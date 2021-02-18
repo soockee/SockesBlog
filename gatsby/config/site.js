@@ -9,13 +9,13 @@ module.exports = {
   logo: '/static/logo/logo.png', // Used for SEO
   banner: '/static/logo/banner.png',
   // JSONLD / Manifest
-  favicon: 'static/logo/favicon.png', // Used for manifest favicon generation
-  favicon144: 'static/logo/favicon_144x144.png', // Used for manifest favicon generation+
-  favicon144Type: `image/png`,
+  favicon: 'static/logo/favicon.webp', // Used for manifest favicon generation
+  favicon144: 'static/logo/favicon_144x144.webp', // Used for manifest favicon generation+
   favicon144Size: '144x144', // Used for manifest favicon generation
-  favicon512: 'static/logo/favicon_512x512.png', // Used for manifest favicon generation
+  favicon144Type: `image/webp`,
+  favicon512: 'static/logo/favicon_512x512.webp', // Used for manifest favicon generation
   favicon512Size: '512x512', // Used for manifest favicon generation
-  favicon512Type: `image/png`,
+  favicon512Type: `image/webp`,
   shortName: 'Stocki', // shortname for manifest. MUST be shorter than 12 characters
   author: 'Simon', // Author for schemaORGJSONLD
   themeColor: '#258f7d',
