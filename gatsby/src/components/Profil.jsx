@@ -2,11 +2,10 @@ import React from 'react';
 import styled from '@emotion/styled';
 import Img from 'gatsby-image';
 import prism from '../styles/prism';
-import { StaticQuery } from 'gatsby'
+import { StaticQuery } from 'gatsby';
 import PropTypes from 'prop-types';
 
 import Thesis from '../../static/pdf/thesis.pdf';
-
 
 const WrapperProfil = styled.div`
   display: flex;
@@ -89,67 +88,65 @@ const InformationText = styled.div`
 `;
 
 const Profil = () => {
-
-    return (
-        <StaticQuery
-        query={graphql`
-            query Profileimage {
-                file(relativePath: { eq: "profil.png" }) {
-                    childImageSharp {
-                        fixed(
-                            width: 256
-                            height: 256
-                        )  {
-                        ...GatsbyImageSharpFixed_withWebp_tracedSVG
-                        }
-                    }
-                }
+  return (
+    <StaticQuery
+      query={graphql`
+        query Profileimage {
+          file(relativePath: { eq: "profil.png" }) {
+            childImageSharp {
+              fixed(width: 256, height: 256) {
+                ...GatsbyImageSharpFixed_withWebp_tracedSVG
+              }
             }
-        `}
-        render={data => (
-            <Wrapper>
-                <Img fixed={data.file.childImageSharp.fixed}></Img>
-                <WrapperProfil>
-                <h2 className="AboutName">Simon Stockhause</h2>
-                </WrapperProfil>
-                <WrapperText>
-                <InformationText>
-                    <ul>
-                    <li>Bachelorabschluss an der Technischen Hochschule Mittelhessen</li>
-                    <ul>
-                        <li>
-                        Abschlussarbeit: Generierung und Ordnung von Events <br></br>in
-                        verteilten Systemen mit asynchroner Kommunikation
-                        </li>
-                        <li>
-                        <a href={Thesis}> Link zur Bachelorarbeit</a>
-                        </li>
-                    </ul>
-                    <li>Masterstudent an der Technischen Hochschule Mittelhessen</li>
-                    </ul>
-                </InformationText>
-                <InformationText>
-                    <ul>
-                    <li>Das mach ich ab und zu...</li>
-                    <ul>
-                        <li>Cloudcomputing</li>
-                        <li>Infrastructure as Code</li>
-                        <li>Observability von (verteilten) Computersystemen</li>
-                        <li>Computer Vision</li>
-                        <li>Unreal Engine </li>
-                        <li>Gaming</li>
-                        <li>Okinawa Goju Ryu Karate / Jiu Jitsu / Hapkido</li>
-                        <li>Bass / Gitarre</li>
-                    </ul>
-                    </ul>
-                </InformationText>
-                </WrapperText>
-            </Wrapper>
-        )}
-        />
-        
-    );
+          }
+        }
+      `}
+      render={data => (
+        <Wrapper>
+          <Img fixed={data.file.childImageSharp.fixed}></Img>
+          <WrapperProfil>
+            <h2 className="AboutName">Simon Stockhause</h2>
+          </WrapperProfil>
+          <WrapperText>
+            <InformationText>
+              <ul>
+                <li>
+                  Bachelorabschluss an der Technischen Hochschule Mittelhessen
+                </li>
+                <ul>
+                  <li>
+                    Abschlussarbeit: Generierung und Ordnung von Events{' '}
+                    <br></br>in verteilten Systemen mit asynchroner
+                    Kommunikation
+                  </li>
+                  <li>
+                    <a href={Thesis}> Link zur Bachelorarbeit</a>
+                  </li>
+                </ul>
+                <li>
+                  Masterstudent an der Technischen Hochschule Mittelhessen
+                </li>
+              </ul>
+            </InformationText>
+            <InformationText>
+              <ul>
+                <li>Das mach ich ab und zu...</li>
+                <ul>
+                  <li>Cloudcomputing</li>
+                  <li>Infrastructure as Code</li>
+                  <li>Observability von (verteilten) Computersystemen</li>
+                  <li>Computer Vision</li>
+                  <li>Unreal Engine </li>
+                  <li>Gaming</li>
+                  <li>Okinawa Goju Ryu Karate / Jiu Jitsu / Hapkido</li>
+                  <li>Bass / Gitarre</li>
+                </ul>
+              </ul>
+            </InformationText>
+          </WrapperText>
+        </Wrapper>
+      )}
+    />
+  );
 };
 export default Profil;
-
-

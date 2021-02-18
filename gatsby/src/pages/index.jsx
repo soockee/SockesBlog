@@ -24,7 +24,10 @@ const Index = ({ data }) => {
   return (
     <Layout>
       <Helmet title={'Sockes Blog'} />
-      <Header title="Sockes Blog" cover={data.file.childImageSharp.fluid}></Header>
+      <Header
+        title="Sockes Blog"
+        cover={data.file.childImageSharp.fluid}
+      ></Header>
 
       <PostWrapper>
         {edges.map(({ node }) => {
@@ -68,11 +71,8 @@ Index.propTypes = {
     }),
     file: PropTypes.shape({
       childImageSharp: PropTypes.shape({
-        fixed: PropTypes.oneOfType([ 
-          PropTypes.shape({}),
-          PropTypes.shape({}),        
-         ]),
-       }),
+        fixed: PropTypes.oneOfType([PropTypes.shape({}), PropTypes.shape({})]),
+      }),
     }),
   }),
 };
@@ -110,10 +110,7 @@ export const query = graphql`
     }
     file(relativePath: { eq: "main_background.png" }) {
       childImageSharp {
-        fluid(
-          maxWidth: 1920
-          quality: 90
-        ) {
+        fluid(maxWidth: 1920, quality: 90) {
           ...GatsbyImageSharpFluid_withWebp_tracedSVG
         }
       }
